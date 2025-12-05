@@ -1,0 +1,38 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go build artifacts
+/bin/
+/build/
+/dist/
+
+# Intermediate build files
+*.o
+*.a
+
+
+# IDE
+.vscode/
+.idea/
+
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+
+# Coverage
+coverage.out
+coverage.html
+*.coverprofile
+
+# Environment files
+.env
+.env.*

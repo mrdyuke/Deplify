@@ -1,0 +1,403 @@
+{
+  "alternatives": {
+    "moment": {
+      "date-fns": "Modular, tree-shakable date utilities. Zero dependencies. Superior performance.",
+      "dayjs": "2KB lightweight alternative. Immutable API. Plugin system for extensibility.",
+      "@swc/core": "Blazing fast compilation. 20-70x faster than Babel. Rust-based architecture."
+    },
+    "react-router-dom": {
+      "wouter": "Minimalist router. 1.3KB bundle size. Hook-based API. Zero dependencies.",
+      "tinro": "Ultra-lightweight router. 0.8KB minified. Simple declarative routing."
+    },
+    "express": {
+      "fastify": "High-performance web framework. JSON schema validation. Plugin architecture.",
+      "polka": "Micro web server. 0 dependencies. 10x faster than Express. Minimal overhead."
+    },
+    "lodash": {
+      "es-toolkit": "Modern utility library. Tree-shakable. TypeScript-first. 2-3x smaller bundle size.",
+      "radash": "TypeScript optimized utilities. Functional programming focus. Zero dependencies."
+    },
+    "redux": {
+      "zustand": "Minimal API surface. Superior runtime performance. No boilerplate required.",
+      "jotai": "Atomic state management. Fine-grained reactivity. React Suspense compatible.",
+      "valtio": "Proxy-based state. Automatic rendering optimization. Minimal bundle footprint."
+    },
+    "axios": {
+      "ky": "Built on Fetch API. 1.5KB minified. Modern async/await syntax. Native TypeScript support.",
+      "ofetch": "Universal fetch wrapper. Automatic JSON handling. Lightweight and extensible."
+    },
+    "@material-ui/core": {
+      "@chakra-ui/react": "Accessible components. CSS-in-JS styling. Themeable design system. Smaller bundle.",
+      "@mantine/core": "TypeScript-first. Hooks API. Dark mode support. Better tree-shaking than MUI.",
+      "shadcn/ui": "Copy-paste components. No dependencies. Full customization. Minimal bundle impact."
+    },
+    "jest": {
+      "vitest": "Vite-native test runner. 10-100x faster than Jest. ES module support. Hot reloading.",
+      "bun:test": "Blazing fast testing. Native Bun runtime. Zero configuration. Built-in coverage."
+    },
+    "webpack": {
+      "esbuild": "Extremely fast bundler. Written in Go. 10-100x faster than Webpack. Minimal config.",
+      "vite": "Instant server start. Hot module replacement. ES module based. Modern DX focus.",
+      "rollup": "Tree-shaking optimization. Code splitting. Plugin ecosystem. Superior bundle size."
+    },
+    "babel": {
+      "@swc/core": "Rust-based compiler. 20-70x faster than Babel. Full ES2022+ support. Low memory usage.",
+      "esbuild": "Blazing fast transpilation. Zero dependencies. CommonJS/ESM support. Minimal overhead."
+    },
+    "enzyme": {
+      "@testing-library/react": "User-centric testing. React best practices. No implementation details. Lightweight API.",
+      "react-hooks-testing-library": "Focused on hooks testing. Minimal abstraction. Fast execution. Simple API."
+    },
+    "prop-types": {
+      "typescript": "Static type checking. Compile-time safety. Better developer experience. No runtime overhead."
+    },
+    "styled-components": {
+      "@emotion/styled": "Better performance. Smaller bundle. CSS prop support. Server-side rendering optimized.",
+      "vanilla-extract": "Zero-runtime CSS. Type-safe styles. CSS variables. No CSS-in-JS runtime overhead."
+    },
+    "mobx": {
+      "zustand": "Simpler API. No observables to manage. Better React integration. Smaller learning curve.",
+      "jotai": "Atomic state model. Fine-grained updates. No boilerplate. TypeScript-first design."
+    },
+    "body-parser": {
+      "express.json": "Built into Express 4.16+. No additional dependencies. Better performance. Modern API."
+    },
+    "request": {
+      "got": "Human-friendly API. Promise-based. HTTP/2 support. Better error handling than Request.",
+      "ky": "Modern Fetch wrapper. 1.5KB size. Async/await syntax. Built-in retry logic."
+    },
+    "core-js": {
+      "es-shim": "Lightweight polyfills. Only what you need. Better tree-shaking. Modern browser focus."
+    },
+    "bluebird": {
+      "native-promise": "Built into modern browsers/Node.js. No polyfill needed. Better performance. Standard API."
+    },
+    "connect": {
+      "express-middleware": "Express built-in middleware system. Better performance. Modern API. Active maintenance."
+    },
+    "recompose": {
+      "react-utilities": "Modern React hooks patterns. No higher-order components. Better TypeScript support. Lightweight."
+    },
+    "left-pad": {
+      "string-pad": "Security-focused. No external dependencies. Simpler implementation. Better maintained."
+    },
+    "isomorphic-fetch": {
+      "cross-fetch": "Lighter weight. Better compatibility. Active maintenance. No deprecated dependencies."
+    },
+    "fbjs": {
+      "core-js-pure": "Safer polyfills. No global pollution. Better tree-shaking. Modern standards compliance."
+    },
+    "@apollo/client": {
+      "@tanstack/react-query": "Superior cache management. Simpler API surface. Better TypeScript support. No GraphQL overhead.",
+      "urql": "Lightweight GraphQL client. Subscription support. Framework agnostic. Smaller bundle size."
+    },
+    "ramda": {
+      "remeda": "TypeScript-first functional library. Better tree-shaking. Modern API design. Smaller footprint."
+    },
+    "pino": {
+      "bunyan": "Lighter weight. Better performance. Simpler API. Active maintenance despite name similarity."
+    },
+    "handlebars": {
+      "eta": "Lightweight templating. Zero dependencies. Better performance. TypeScript support."
+    },
+    "socket.io": {
+      "ws": "Minimal WebSocket implementation. No fallbacks overhead. Better performance. Simpler API.",
+      "uWebSockets.js": "Blazing fast WebSocket server. C++ backend. 10x performance over Socket.IO. Memory efficient."
+    },
+    "passport": {
+      "next-auth": "Modern authentication. OAuth2.0 focused. Better TypeScript support. Framework agnostic design."
+    },
+    "mocha": {
+      "uvu": "Ultra-fast testing. Minimal overhead. Promise-based. 100x faster than Mocha."
+    },
+    "chai": {
+      "uvu/assert": "Lightweight assertions. Zero dependencies. Better performance. Modern API design."
+    },
+    "sinon": {
+      "tinyspy": "Minimal spying library. 0.4KB size. TypeScript support. No global pollution."
+    },
+    "grunt": {
+      "esbuild": "Modern task runner. Blazing fast compilation. No plugins needed. Better performance."
+    },
+    "gulp": {
+      "vite": "Modern build system. Instant HMR. ES module native. Superior developer experience."
+    },
+    "bower": {
+      "esm.sh": "Modern CDN for ES modules. No package manager needed. Direct browser imports. Fast delivery.",
+      "skypack": "CDN for npm packages. ES module format. No build step required. Fast global delivery."
+    },
+    "yarn": {
+      "pnpm": "Efficient disk usage. Hard links storage. Faster installations. Better monorepo support."
+    },
+    "@types/node": {
+      "bun-types": "Modern runtime types. Better performance focus. Web-compatible APIs. Future-proof design."
+    },
+    "react-loadable": {
+      "next/dynamic": "Built into Next.js. Better code splitting. Automatic optimization. Zero configuration."
+    },
+    "react-helmet": {
+      "react-helmet-async": "Modern API. Better SSR support. Smaller bundle. Improved performance."
+    },
+    "react-transition-group": {
+      "@react-spring/web": "Physics-based animations. Better performance. More expressive API. Smaller footprint."
+    },
+    "react-dates": {
+      "@datepicker/react": "Lightweight date picker. Modern API. Better accessibility. Smaller bundle size."
+    },
+    "react-big-calendar": {
+      "fullcalendar": "Modern calendar UI. Better performance. Active maintenance. Smaller dependency tree."
+    },
+    "react-select": {
+      "@tanstack/react-virtual": "Virtualized scrolling. Better performance with large datasets. Minimal overhead. Modern API."
+    },
+    "draft-js": {
+      "@tiptap/react": "Modern rich text editor. Better performance. Smaller bundle. TypeScript-first design."
+    },
+    "firebase": {
+      "supabase": "Open source alternative. PostgreSQL based. Better pricing model. Self-hostable option."
+    },
+    "amplitude-js": {
+      "posthog-js": "Open source analytics. Self-hostable. Better privacy controls. Modern API design."
+    },
+    "newrelic": {
+      "appsignal": "Lighter agent. Better performance impact. Simpler pricing. Modern monitoring features."
+    },
+    "datadog-browser-sdk": {
+      "highlight.io": "Open source observability. Better pricing. Self-hostable. Modern developer experience."
+    },
+    "splitbee": {
+      "umami": "Privacy-focused analytics. Self-hostable. GDPR compliant. Minimal footprint."
+    },
+    "auth0-js": {
+      "better-auth": "Modern authentication SDK. Better TypeScript support. Smaller bundle. Privacy-focused."
+    },
+    "aws-sdk": {
+      "@aws-sdk/client-s3": "Modular AWS SDK v3. Tree-shakable. 50-90% smaller bundles. Better TypeScript support."
+    },
+    "googleapis": {
+      "google-auth-library": "Lightweight Google auth. No full API client overhead. Better tree-shaking. Modern API."
+    },
+    "twilio": {
+      "messagebird": "Competitive pricing. Better API design. Modern SDK. Smaller bundle footprint."
+    },
+    "stripe": {
+      "lemon-squeezy": "Developer-friendly API. No monthly fees. Better TypeScript support. Simpler integration."
+    },
+    "algoliasearch": {
+      "typesense": "Open source alternative. Self-hostable. Better pricing. Modern API design."
+    },
+    "elasticsearch-js": {
+      "meilisearch": "Lighter weight. Better performance. Simpler setup. Open source with permissive license."
+    },
+    "redis": {
+      "ioredis": "Modern Redis client. Better TypeScript support. Cluster support. Active maintenance."
+    },
+    "mongoose": {
+      "drizzle-orm": "Lightweight ORM. Better TypeScript support. No magic. Superior performance."
+    },
+    "sequelize": {
+      "prisma": "Type-safe database access. Better performance. Modern API. Auto-generated types."
+    },
+    "knex": {
+      "kysely": "TypeScript-first query builder. Better type safety. Modern API design. Smaller footprint."
+    },
+    "passport-jwt": {
+      "fast-jwt": "Lightweight JWT library. Better performance. Simpler API. No Express middleware overhead."
+    },
+    "jsonwebtoken": {
+      "jose": "Modern JWT implementation. Better security practices. Web Crypto API support. Smaller bundle."
+    },
+    "bcrypt": {
+      "@node-rs/bcrypt": "Rust-based implementation. 10-50x faster. Better security. No native dependencies."
+    },
+    "sharp": {
+      "@resvg/resvg-js": "Lighter image processing. Better performance. SVG focused. No native dependencies."
+    },
+    "puppeteer": {
+      "playwright": "Multi-browser support. Better reliability. Modern API. Faster execution."
+    },
+    "request-promise": {
+      "got": "Promise-based HTTP client. Better error handling. Modern API. Active maintenance."
+    },
+    "superagent": {
+      "ky": "Modern Fetch wrapper. 1.5KB size. Simpler API. Better TypeScript support."
+    },
+    "form-data": {
+      "undici": "Modern HTTP/1.1 client. Better performance. Web standard API. Node.js core integration."
+    },
+    "xml2js": {
+      "fast-xml-parser": "Blazing fast XML parsing. Better performance. Smaller bundle. TypeScript support."
+    },
+    "csv-parser": {
+      "papaparse": "Better CSV parsing. Browser support. Streaming API. Modern TypeScript codebase."
+    },
+    "winston": {
+      "pino": "Better performance. JSON logging format. Stream support. Smaller memory footprint."
+    },
+    "morgan": {
+      "pino-http": "Better performance. JSON format support. Stream integration. Modern API design."
+    },
+    "helmet": {
+      "secure-headers": "Lighter security headers. Better performance. Simpler API. No middleware overhead."
+    },
+    "cors": {
+      "cors-anywhere": "Lighter CORS handling. Better performance. Simpler configuration. Modern API."
+    },
+    "compression": {
+      "brotli": "Better compression ratio. Modern algorithm. Web standard support. Better performance."
+    },
+    "serve-static": {
+      "serve-handler": "Lighter static serving. Better performance. Modern API. No Express dependency."
+    },
+    "cookie-parser": {
+      "cookies": "Lighter cookie handling. Better performance. Simpler API. No middleware overhead."
+    },
+    "csurf": {
+      "csrf-csrf": "Modern CSRF protection. Better security practices. Simpler API. TypeScript support."
+    },
+    "express-session": {
+      "client-sessions": "Client-side sessions. No server storage. Better scalability. Modern security practices."
+    },
+    "passport-local": {
+      "next-auth": "Modern authentication. OAuth2.0 support. Better TypeScript integration. Framework agnostic."
+    },
+    "nodemailer": {
+      "resend": "Modern email API. Better deliverability. Simpler API. TypeScript-first design."
+    },
+    "winston-transport": {
+      "pino-pretty": "Better log formatting. Faster performance. Modern API. Smaller dependency tree."
+    },
+    "debug": {
+      "debuglog": "Lighter debugging. Better performance. Simpler API. No color overhead in production."
+    },
+    "chalk": {
+      "kleur": "Lighter text coloring. Better performance. Zero dependencies. Modern ES module support."
+    },
+    "colors": {
+      "picocolors": "Tiny color library. 0.5KB size. Better performance. No prototype pollution."
+    },
+    "inquirer": {
+      "prompts": "Lighter CLI prompts. Better performance. Simpler API. No readline overhead."
+    },
+    "yargs": {
+      "commander": "Lighter command parsing. Better performance. Simpler API. More popular in modern projects."
+    },
+    "commander": {
+      "meow": "Ultra-light CLI parsing. 1KB size. Simple API. Modern TypeScript support."
+    },
+    "glob": {
+      "tiny-glob": "Faster globbing. Better performance. Smaller bundle. Modern API design."
+    },
+    "rimraf": {
+      "del": "Lighter file deletion. Better performance. Promise API. Modern TypeScript support."
+    },
+    "mkdirp": {
+      "make-dir": "Lighter directory creation. Better performance. Promise API. Modern TypeScript codebase."
+    },
+    "npm-run-all": {
+      "concurrently": "Lighter task running. Better performance. Simpler API. Modern TypeScript support."
+    },
+    "cross-env": {
+      "dotenv-cli": "Lighter environment handling. Better performance. .env file support. Simpler API."
+    },
+    "husky": {
+      "simple-git-hooks": "Lighter git hooks. Better performance. Simpler configuration. No Node.js dependency."
+    },
+    "lint-staged": {
+      "quick-lint-staged": "Faster linting. Better performance. Simpler API. Modern TypeScript design."
+    },
+    "prettier": {
+      "dprint": "Blazing fast formatting. WASM-based. 10-100x faster than Prettier. Better performance."
+    },
+    "eslint": {
+      "oxlint": "Rust-based linter. 10-100x faster than ESLint. Better performance. Modern rule set."
+    },
+    "stylelint": {
+      "lightningcss": "CSS parser and minifier. Better performance. Modern CSS features. Tiny bundle size."
+    },
+    "postcss": {
+      "lightningcss": "Faster CSS processing. Rust-based. Better performance. Modern CSS support."
+    },
+    "autoprefixer": {
+      "lightningcss": "All-in-one CSS solution. Better performance. Modern CSS features. Smaller footprint."
+    },
+    "sass": {
+      "lightningcss": "CSS processing only. Better performance. No Sass dependency. Modern workflow."
+    },
+    "less": {
+      "lightningcss": "CSS processing focus. Better performance. Modern features. No Less dependency."
+    },
+    "stylus": {
+      "lightningcss": "Modern CSS processing. Better performance. Web standards focus. No Stylus overhead."
+    },
+    "webpack-dev-server": {
+      "vite": "Blazing fast dev server. Instant HMR. ES module native. Superior developer experience."
+    },
+    "babel-loader": {
+      "esbuild-loader": "10-100x faster compilation. Better performance. Modern API. Smaller config overhead."
+    },
+    "css-loader": {
+      "unplugin": "Universal plugin system. Better performance. Modern bundler support. Smaller footprint."
+    },
+    "style-loader": {
+      "vite-css": "Native CSS handling. Better performance. Hot reloading. No loader overhead."
+    },
+    "file-loader": {
+      "vite-assets": "Native asset handling. Better performance. Modern API. No loader configuration."
+    },
+    "url-loader": {
+      "vite-images": "Built-in image optimization. Better performance. Modern formats support. No config needed."
+    },
+    "html-webpack-plugin": {
+      "vite-plugin-html": "Lighter HTML generation. Better performance. Modern API. Vite native integration."
+    },
+    "mini-css-extract-plugin": {
+      "vite-css-extract": "Native CSS extraction. Better performance. Modern API. No plugin overhead."
+    },
+    "terser-webpack-plugin": {
+      "esbuild-minify": "10-100x faster minification. Better performance. Modern API. Smaller bundles."
+    },
+    "copy-webpack-plugin": {
+      "vite-copy": "Lighter asset copying. Better performance. Modern API. Vite native support."
+    },
+    "clean-webpack-plugin": {
+      "vite-clean": "Lighter build cleaning. Better performance. Modern API. No plugin overhead."
+    },
+    "webpack-bundle-analyzer": {
+      "rollup-plugin-visualizer": "Lighter bundle analysis. Better performance. Modern API. Rollup/Vite support."
+    },
+    "source-map-explorer": {
+      "source-map-visualization": "Modern source map analysis. Better performance. Interactive UI. Smaller footprint."
+    },
+    "jest-dom": {
+      "@testing-library/jest-dom": "Lighter DOM assertions. Better performance. Modern API. Official Testing Library."
+    },
+    "react-test-renderer": {
+      "@testing-library/react": "User-centric testing. Better React integration. Modern API. No renderer overhead."
+    },
+    "enzyme-adapter-react-16": {
+      "@testing-library/react": "Modern React testing. Better hooks support. Simpler API. No adapter needed."
+    },
+    "react-addons-test-utils": {
+      "@testing-library/react": "Official testing utilities. Better React compatibility. Modern API. No legacy overhead."
+    },
+    "react-hot-loader": {
+      "vite-react-refresh": "Built into Vite. Better performance. No configuration needed. Modern HMR API."
+    },
+    "react-loadable-ssr-addon": {
+      "next/dynamic": "Built into Next.js. Better SSR support. Automatic optimization. Zero configuration."
+    },
+    "react-snap": {
+      "vite-ssg": "Modern static site generation. Better performance. Vite native. Simplified API."
+    },
+    "prerender-spa-plugin": {
+      "vite-plugin-ssr": "Lighter SSR plugin. Better performance. Modern API. Vite native integration."
+    },
+    "workbox-webpack-plugin": {
+      "vite-pwa": "Lighter PWA plugin. Better performance. Modern API. Vite native support."
+    },
+    "compression-webpack-plugin": {
+      "vite-compression": "Native compression support. Better performance. Modern formats. No plugin overhead."
+    }
+  }
+}
