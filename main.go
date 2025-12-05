@@ -10,6 +10,7 @@ import (
 )
 
 type PackageJSON struct {
+	Info            string            `json:"info"`
 	ProjectName     string            `json:"name"`
 	ProjectVersion  string            `json:"version"`
 	Dependencies    map[string]string `json:"dependencies"`
@@ -46,6 +47,9 @@ func main() {
 		color.Red("%s", err)
 		return
 	}
+
+	// Удалить напоминание когда основной функционал будет готов
+	fmt.Printf("\n %s \n", color.RedString(packageJSON.Info))
 
 	fmt.Printf("\n Project name: %s", color.GreenString(packageJSON.ProjectName))
 	fmt.Printf("\n Version: %s \n", color.GreenString(packageJSON.ProjectVersion))
