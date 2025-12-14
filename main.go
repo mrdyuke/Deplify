@@ -4,58 +4,75 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"strings"
 
 	"github.com/fatih/color"
 )
 
 type PackageJSON struct {
-	Info            string            `json:"info"`
-	ProjectName     string            `json:"name"`
-	ProjectVersion  string            `json:"version"`
 	Dependencies    map[string]string `json:"dependencies"`
 	DevDependencies map[string]string `json:"devDependencies"`
 }
 
-type Alternative struct {
+type AlternativesJSON struct {
 	Alternatives map[string]map[string]string `json:"alternatives"`
 }
 
+func NewJSON(jsonType string) (*PackageJSON, *AlternativesJSON, error) {
+	switch jsonType {
+
+	case "package":
+		readJSON, err := os.ReadFile("package.mock.json")
+		if err != nil {
+			return nil, nil, err
+		}
+		var packageJSON PackageJSON
+		err = json.Unmarshal(readJSON, &packageJSON)
+		if err != nil {
+			return nil, nil, err
+		}
+		return &packageJSON, nil, nil
+
+	case "alternatives":
+		readJSON, err := os.ReadFile("alternatives.json")
+		if err != nil {
+			return nil, nil, err
+		}
+		var alternativesJSON AlternativesJSON
+		err = json.Unmarshal(readJSON, &alternativesJSON)
+		if err != nil {
+			return nil, nil, err
+		}
+		return nil, &alternativesJSON, nil
+
+	default:
+		return nil, nil, fmt.Errorf("unsupported JSON type: %s", jsonType)
+	}
+}
+
 func main() {
-	packageData, err := os.ReadFile("package.mock.json")
+	packagesData, _, err := NewJSON("package")
 	if err != nil {
-		color.Red("%s", err)
+		fmt.Println(err)
 		return
 	}
 
-	var packageJSON PackageJSON
-	err = json.Unmarshal(packageData, &packageJSON)
-	if err != nil {
-		color.Red("%s", err)
-		return
+	/* 	_, alternativesData, err := NewJSON("alternatives")
+	   	if err != nil {
+	   		fmt.Println(err)
+	   		return
+	   	} */
+
+	packageDataArr := []string{}
+
+	for packageNames := range packagesData.Dependencies {
+		packageDataArr = append(packageDataArr, packageNames)
 	}
 
-	alternativeData, err := os.ReadFile("alternatives.json")
-	if err != nil {
-		color.Red("%s", err)
-		return
+	for packageNames := range packagesData.DevDependencies {
+		packageDataArr = append(packageDataArr, packageNames)
 	}
 
-	var alternativesJSON Alternative
-	err = json.Unmarshal(alternativeData, &alternativesJSON)
-	if err != nil {
-		color.Red("%s", err)
-		return
+	for _, packagesData := range packageDataArr {
+		fmt.Printf("\n %s \n", color.GreenString(packagesData))
 	}
-
-	// Удалить напоминание когда основной функционал будет готов
-	fmt.Printf("\n %s \n", color.RedString(packageJSON.Info))
-
-	fmt.Printf("\n Project name: %s", color.GreenString(packageJSON.ProjectName))
-	fmt.Printf("\n Version: %s \n", color.GreenString(packageJSON.ProjectVersion))
-	fmt.Printf("\n %s \n", strings.Repeat("=", 30))
-
-	// реализовать поиск совпадений ключей в alternativesJSON и packageJSON
-	// если ключи совпадают, то вывести ключ и значение из packageJSON
-
 }
