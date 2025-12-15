@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"time"
 
 	"github.com/fatih/color"
 )
@@ -51,13 +50,13 @@ func NewJSON(jsonType string) (*PackageJSON, *AlternativesJSON, error) {
 }
 
 func main() {
-	packagesData, _, err := NewJSON("package")
+	packageData, _, err := NewJSON("package")
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 
-	_, alternativesData, err := NewJSON("alternatives")
+	_, alternativeData, err := NewJSON("alternatives")
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -65,26 +64,30 @@ func main() {
 
 	packageDataArr := []string{}
 
-	for packageNames := range packagesData.Dependencies {
+	for packageNames := range packageData.Dependencies {
 		packageDataArr = append(packageDataArr, packageNames)
 	}
 
-	for packageNames := range packagesData.DevDependencies {
+	for packageNames := range packageData.DevDependencies {
 		packageDataArr = append(packageDataArr, packageNames)
 	}
 
 	for _, packageNames := range packageDataArr {
-		alts, exists := alternativesData.Alternatives[packageNames]
+		alts, exists := alternativeData.Alternatives[packageNames]
 		if !exists || len(alts) == 0 {
 			continue
 		}
 
 		fmt.Printf("\n %s\n", color.GreenString(packageNames))
-		for alternativeName, description := range alts {
-			fmt.Printf("  %s: %s\n", color.BlueString(alternativeName), color.YellowString(description))
+		for alternativeNames, description := range alts {
+			fmt.Printf("  %s: %s\n", color.BlueString(alternativeNames), color.YellowString(description))
 
 		}
-		time.Sleep(250 * time.Millisecond)
+		/* In my opinion, it's better to read the text with a slight delay,
+		so I'll leave this as a comment in case you feel that way too. */
+
+		// time.Sleep(200 * time.Millisecond)
 	}
+	fmt.Println("")
 
 }
