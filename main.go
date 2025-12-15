@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	"github.com/fatih/color"
 )
@@ -56,11 +57,11 @@ func main() {
 		return
 	}
 
-	/* 	_, alternativesData, err := NewJSON("alternatives")
-	   	if err != nil {
-	   		fmt.Println(err)
-	   		return
-	   	} */
+	_, alternativesData, err := NewJSON("alternatives")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
 
 	packageDataArr := []string{}
 
@@ -72,7 +73,18 @@ func main() {
 		packageDataArr = append(packageDataArr, packageNames)
 	}
 
-	for _, packagesData := range packageDataArr {
-		fmt.Printf("\n %s \n", color.GreenString(packagesData))
+	for _, packageNames := range packageDataArr {
+		alts, exists := alternativesData.Alternatives[packageNames]
+		if !exists || len(alts) == 0 {
+			continue
+		}
+
+		fmt.Printf("\n %s\n", color.GreenString(packageNames))
+		for alternativeName, description := range alts {
+			fmt.Printf("  %s: %s\n", color.BlueString(alternativeName), color.YellowString(description))
+
+		}
+		time.Sleep(250 * time.Millisecond)
 	}
+
 }
