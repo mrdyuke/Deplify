@@ -21,7 +21,7 @@ func NewJSON(jsonType string) (*PackageJSON, *AlternativesJSON, error) {
 	switch jsonType {
 
 	case "package":
-		readJSON, err := os.ReadFile("package.mock.json")
+		readJSON, err := os.ReadFile("package.json")
 		if err != nil {
 			return nil, nil, err
 		}
@@ -89,5 +89,6 @@ func main() {
 		// time.Sleep(200 * time.Millisecond)
 	}
 	fmt.Println("")
+	fmt.Scanln()
 
 }
