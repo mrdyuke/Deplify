@@ -3,6 +3,8 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io"
+	"net/http"
 	"os"
 
 	"github.com/fatih/color"
@@ -33,12 +35,17 @@ func NewJSON(jsonType string) (*PackageJSON, *AlternativesJSON, error) {
 		return &packageJSON, nil, nil
 
 	case "alternatives":
-		readJSON, err := os.ReadFile("alternatives.json")
+		resp, err := http.Get("https://cold-meadow-d455.mrdyuke.workers.dev/")
+		if err != nil {
+			return nil, nil, err
+		}
+		defer resp.Body.Close()
+		body, err := io.ReadAll(resp.Body)
 		if err != nil {
 			return nil, nil, err
 		}
 		var alternativesJSON AlternativesJSON
-		err = json.Unmarshal(readJSON, &alternativesJSON)
+		err = json.Unmarshal(body, &alternativesJSON)
 		if err != nil {
 			return nil, nil, err
 		}
