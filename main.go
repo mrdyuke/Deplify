@@ -8,6 +8,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 
 	"github.com/fatih/color"
 )
@@ -42,16 +43,26 @@ func NewPkgJSON(p string) (*PkgJSON, error) {
 }
 
 func NewAltJSON(url string) (*AltJSON, error) {
+	cacheTTL := 24 * time.Hour
 	cachePath := filepath.Join(os.Getenv("LocalAppData"), "DeplifyCache")
 	cacheFile := filepath.Join(cachePath, "alternatives.json")
 
 	var alt AltJSON
 
-	data, err := os.ReadFile(cacheFile)
+	fileInfo, err := os.Stat(cacheFile)
 	if err == nil {
-		err := json.Unmarshal(data, &alt)
+		lastModified := fileInfo.ModTime()
+		if time.Since(lastModified) > cacheTTL {
+			os.Remove(cacheFile)
+		}
+
+		data, err := os.ReadFile(cacheFile)
 		if err == nil {
-			return &alt, nil
+
+			err = json.Unmarshal(data, &alt)
+			if err == nil {
+				return &alt, nil
+			}
 		}
 	}
 
@@ -107,7 +118,7 @@ func main() {
 
 	fmt.Printf("\n %s%s\n", color.BlueString("Project: "), color.GreenString(pkgJSON.Name))
 	fmt.Printf(" %s%s\n\n", color.BlueString("Version: "), color.GreenString(pkgJSON.Version))
-	fmt.Printf(" %s\n", strings.Repeat("━", len(pkgJSON.Name)+len(pkgJSON.Version)+10))
+	fmt.Printf(" %s\n", strings.Repeat("-", 90))
 
 	pkgNames := pkgJSON.CombineDeps()
 
