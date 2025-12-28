@@ -1,3 +1,7 @@
+
+<img width="1769" height="1077" alt="image 1" src="https://github.com/user-attachments/assets/7320d65f-f550-4a8a-b8f3-6d74cf3ae28c" />
+
+
 ## About the project
 
 Hello to everyone who reads this text!

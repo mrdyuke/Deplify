@@ -7,7 +7,6 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
-	"strings"
 	"time"
 
 	"github.com/fatih/color"
@@ -118,8 +117,7 @@ func main() {
 	}
 
 	fmt.Printf("\n %s%s\n", color.BlueString("Project: "), color.GreenString(pkgJSON.Name))
-	fmt.Printf(" %s%s\n\n", color.BlueString("Version: "), color.GreenString(pkgJSON.Version))
-	fmt.Printf(" %s\n", strings.Repeat("-", 90))
+	fmt.Printf(" %s%s\n", color.BlueString("Version: "), color.GreenString(pkgJSON.Version))
 
 	pkgNames := pkgJSON.CombineDeps()
 
