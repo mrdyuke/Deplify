@@ -1,4 +1,4 @@
-module Deplify
+module github.com/mrdyuke/deplify
 
 go 1.25.3
 

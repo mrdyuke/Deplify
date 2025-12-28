@@ -51,6 +51,7 @@ func NewAltJSON(url string) (*AltJSON, error) {
 
 	fileInfo, err := os.Stat(cacheFile)
 	if err == nil {
+
 		lastModified := fileInfo.ModTime()
 		if time.Since(lastModified) > cacheTTL {
 			os.Remove(cacheFile)
