@@ -42,9 +42,14 @@ func NewPkgJSON(p string) (*PkgJSON, error) {
 }
 
 func NewAltJSON(url string) (*AltJSON, error) {
-	cacheTTL := 24 * time.Hour
-	cachePath := filepath.Join(os.Getenv("LocalAppData"), "DeplifyCache")
+	cacheDir, err := os.UserCacheDir()
+	if err != nil {
+		return nil, err
+	}
+
+	cachePath := filepath.Join(cacheDir, "DeplifyCache")
 	cacheFile := filepath.Join(cachePath, "alternatives.json")
+	cacheTTL := 24 * time.Hour
 
 	var alt AltJSON
 
