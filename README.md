@@ -1,7 +1,6 @@
 
 <img width="1769" height="1077" alt="image 1" src="https://github.com/user-attachments/assets/7320d65f-f550-4a8a-b8f3-6d74cf3ae28c" />
 
-
 ## About the project
 
 Hello to everyone who reads this text!
@@ -22,16 +21,10 @@ At the moment, **further development is not planned**.
 To use this project, you need **one** of the following:
 
 - **Go installed on your system [Download Golang](https://go.dev/dl/)**
-
-**OR**
-
- - **A precompiled binary for your operating system from [GitHub Releases](https://github.com/mrdyuke/deplify/releases)**
+- **A precompiled binary for your operating system from [GitHub Releases](https://github.com/mrdyuke/deplify/releases)**
 
 You can verify that Go is installed by running:
-
-```bash
-go version
-````
+`go version`
 
 ---
 
@@ -40,18 +33,24 @@ go version
 ### Using Go
 
 If Go is installed, install the project directly from the repository:
+`go install github.com/mrdyuke/deplify@latest`
 
-```bash
-go install github.com/mrdyuke/deplify@latest
-```
+The binary will be installed to `$HOME/go/bin/deplify`.
 
-After installation, the executable will be available as:
+#### To run the program:
 
-```bash
-deplify
-```
+**Option 1 (recommended) - Add to PATH:**
+`export PATH="$HOME/go/bin:$PATH"`  
+*(add to ~/.bashrc, ~/.zshrc, etc. for persistence)*
 
-> Make sure that `$GOPATH/bin` or `$HOME/go/bin` is included in your `PATH`.
+**Option 2 - Run with full path:**
+`~/go/bin/deplify`
+
+**Option 3 - Copy to system binaries:**
+`sudo cp ~/go/bin/deplify /usr/local/bin/`
+
+After setting up the PATH, you can run:
+`deplify --help`
 
 ---
 
@@ -64,13 +63,9 @@ If you do not want to install Go:
 3. Add the binary to your system `PATH`
 
 Once this is done, the program can be executed directly:
-
-```bash
-deplify
-```
+`deplify`
 
 ---
-
 
 ## Notes
 
