@@ -49,9 +49,6 @@ The binary will be installed to `$HOME/go/bin/deplify`.
 **Option 3 - Copy to system binaries:**
 `sudo cp ~/go/bin/deplify /usr/local/bin/`
 
-After setting up the PATH, you can run:
-`deplify --help`
-
 ---
 
 ### Using a precompiled binary
